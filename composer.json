@@ -1,0 +1,12 @@
+{
+  "name": "ueef/assignable",
+  "type": "library",
+  "require": {
+    "php": ">=5.4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ueef\\Assignable\\": "src/"
+    }
+  }
+}
