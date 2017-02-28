@@ -19,7 +19,7 @@ namespace Ueef\Assignable\Traits {
         public function assign(array $parameters)
         {
             foreach ($parameters as $key => $value) {
-                $setterMethod = 'set' . ucfirst($key);
+                $setterMethod = 'set' . str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $key)));
                 if (method_exists($this, $setterMethod)) {
                     $this->$setterMethod($value);
                     continue;
