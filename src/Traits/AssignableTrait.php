@@ -5,7 +5,7 @@ namespace Ueef\Assignable\Traits;
 
 trait AssignableTrait
 {
-    public function assign(array $parameters)
+    public function assign(array $parameters): void
     {
         foreach ($parameters as $key => $value) {
             if (property_exists($this, $key)) {
