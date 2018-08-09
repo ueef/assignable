@@ -1,8 +1,9 @@
 {
   "name": "ueef/assignable",
   "type": "library",
+  "description": "",
   "require": {
-    "php": ">=5.4.2"
+    "php": ">=7.1"
   },
   "autoload": {
     "psr-4": {

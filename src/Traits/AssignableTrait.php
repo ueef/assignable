@@ -1,27 +1,15 @@
 <?php
+declare(strict_types=1);
 
-namespace Ueef\Assignable\Traits {
+namespace Ueef\Assignable\Traits;
 
-    trait AssignableTrait
+trait AssignableTrait
+{
+    public function assign(array $parameters)
     {
-        /**
-         * @param array $parameters
-         */
-        public function __construct(array $parameters = [])
-        {
-            $this->assign($parameters);
-        }
-
-        /**
-         * @param array $parameters
-         * @return void
-         */
-        public function assign(array $parameters)
-        {
-            foreach ($parameters as $key => $value) {
-                if (property_exists($this, $key)) {
-                    $this->{$key} = $value;
-                }
+        foreach ($parameters as $key => $value) {
+            if (property_exists($this, $key)) {
+                $this->{$key} = $value;
             }
         }
     }
