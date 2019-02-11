@@ -5,6 +5,6 @@ namespace Ueef\Assignable\Interfaces;
 
 interface AssignableInterface
 {
-    public function assign(array $parameters): self;
+    public function assign(array $parameters);
 }
 
